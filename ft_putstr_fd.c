@@ -6,11 +6,11 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 12:44:22 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/02 18:50:57 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/02 21:34:33 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

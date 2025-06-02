@@ -6,7 +6,7 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 18:06:56 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/02 19:21:13 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/02 21:42:31 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,43 +85,3 @@ char	**ft_split(const char *str, char c)
 	result[i] = NULL;
 	return (result);
 }
-
-#include <stdio.h>
-#include <stdlib.h>
-#include "libft.h"
-
-void print_split(char **split)
-{
-    int i = 0;
-    while (split[i])
-    {
-        printf("split[%d]: \"%s\"\n", i, split[i]);
-        i++;
-    }
-}
-
-int main(void)
-{
-    char *str = "Hello,,World,,This,is,Libft!";
-    char delimiter = ',';
-
-    char **result = ft_split(str, delimiter);
-
-    if (result)
-    {
-        print_split(result);
-
-        // Free allocated memory
-        int i = 0;
-        while (result[i])
-            free(result[i++]);
-        free(result);
-    }
-    else
-    {
-        printf("ft_split returned NULL\n");
-    }
-
-    return 0;
-}
-
