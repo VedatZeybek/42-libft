@@ -32,7 +32,7 @@ SRCS =	 ft_atoi.c\
 			ft_strtrim.c\
 			ft_substr.c\
 			ft_tolower.c\
-			ft_toupper.c
+			ft_toupper.c 
 
 SRCS_BONUS =	ft_lstadd_back.c\
 					ft_lstadd_front.c\
@@ -50,7 +50,7 @@ BONUS_OBJS = $(SRCS_BONUS:.c=.o)
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-AR = ar rc
+AR = ar rcs
 
 RM= rm -rf
 
