@@ -6,7 +6,7 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 12:13:11 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/02 18:31:13 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/02 21:08:03 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (!lst || !new)
 		return ;
+	last_node = ft_lstlast(*lst);
 	if (last_node == NULL)
 	{
 		*lst = new;
 		return ;
 	}
-	last_node = ft_lstlast(*lst);
 	last_node->next = new;
 }

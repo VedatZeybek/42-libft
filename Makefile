@@ -39,13 +39,16 @@ SRCS_BONUS =	ft_lstadd_back.c\
 					ft_lstmap.c\
 					ft_lstnew.c\
 					ft_lstsize.c\
-					ft_lstiter.c\
+					ft_lstiter.c
 	
 OBJS = $(SRCS:.c=.o)
 BONUS_OBJS = $(SRCS_BONUS:.c=.o)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+
+AR = ar
+ARFLAGS = rcs
 
 GREEN = \033[0;32m
 YELLOW = \033[0;33m
@@ -56,7 +59,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@echo "$(YELLOW)Creating library $(NAME)...$(RESET)"
-	@$(AR) $(NAME) $(OBJS)
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 	@echo "$(GREEN)✓ $(NAME) created successfully!$(RESET)"
 
 %.o: %.c
@@ -65,7 +68,7 @@ $(NAME): $(OBJS)
 
 bonus: $(BONUS_OBJS)
 	@echo "$(YELLOW)Creating library $(NAME) with bonus...$(RESET)"
-	@$(AR) $(NAME) $(BONUS_OBJS)
+	@$(AR) $(ARFLAGS) $(NAME) $(BONUS_OBJS)
 	@echo "$(GREEN)✓ $(NAME) with bonus created successfully!$(RESET)"
 
 clean:
