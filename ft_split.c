@@ -6,7 +6,7 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 18:06:56 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/02 22:20:52 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/03 23:45:39 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,20 @@ static char	*malloc_word(const char *str, char c)
 	return (word);
 }
 
+static char	**ft_freeall_words(char **arr)
+{
+	int	i;
+
+	i = 0;
+	while (arr[i])
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
+	return (NULL);
+}
+
 char	**ft_split(const char *str, char c)
 {
 	int		total;
@@ -77,7 +91,10 @@ char	**ft_split(const char *str, char c)
 			str++;
 		if (*str && !is_charsequivalent(*str, c))
 		{
-			result[i++] = malloc_word(str, c);
+			result[i] = malloc_word(str, c);
+			if (!result[i])
+				return (ft_freeall_words(result));
+			i++;
 			while (*str && !is_charsequivalent(*str, c))
 				str++;
 		}
