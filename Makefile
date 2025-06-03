@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/06/03 14:39:35 by vzeybek           #+#    #+#              #
+#    Updated: 2025/06/03 14:42:45 by vzeybek          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 SRCS =	 ft_atoi.c\
 			ft_bzero.c\
@@ -48,14 +60,11 @@ OBJS = $(SRCS:.c=.o)
 BONUS_OBJS = $(SRCS_BONUS:.c=.o)
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
-
+CFLAGS = -Wall -Wextra -Werror -fPIC
 AR = ar rcs
-
 RM= rm -rf
 
 
-BONUS_FLAG = .bonus
 $(BONUS_FLAG): $(OBJS) $(BONUS_OBJS)
 
 GREEN = \033[0;32m

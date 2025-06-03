@@ -6,7 +6,7 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 12:12:37 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/02 21:17:13 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/03 13:16:20 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,12 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (result > 9223372036854775807 || result < -9223372036854775807)
-			return (0);
 		result = (result * 10) + str[i] - '0';
 		i++;
 	}
-	return (result * factor);
+	if (result > 9223372036854775807)
+		return (-1);
+	if ((result * factor) < -9223372036854775807)
+		return (0);
+	return ((int)result * factor);
 }

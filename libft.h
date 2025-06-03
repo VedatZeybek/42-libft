@@ -6,7 +6,7 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 12:55:29 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/03 12:10:29 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/03 13:05:19 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define    LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_list
 {

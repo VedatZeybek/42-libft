@@ -6,7 +6,7 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 13:12:27 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/02 18:46:20 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/03 13:55:46 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	result = (char *)malloc(end - start + 1);
 	if (!result)
 		return (NULL);
-	result = (char *)malloc(end - start + 1);
-	if (!result)
-		return (NULL);
-	ft_strlcat(result, s1 + start, end - start);
+	ft_strlcpy(result, s1 + start, end - start);
 	result[end - start] = '\0';
 	return (result);
 }

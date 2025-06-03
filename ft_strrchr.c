@@ -6,7 +6,7 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 13:12:25 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/03 12:10:42 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/03 12:26:18 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ char	*ft_strrchr(const char *str, char c)
 	while (*str)
 	{
 		if (*str == c)
-			last_char = str;
+			last_char = (char *)str;
 		str++;
 	}
 	if (last_char)
 		return (last_char);
 	if (c == '\0')
-		return (str);
+		return ((char *)str);
 	return (NULL);
 }

@@ -15,9 +15,11 @@ int main()
     printf("   'W' karakteri bulundu: %s\n", result ? result : "NULL");
     
     printf("ft_atoi test:\n");
-    char *num_str = "  -123abc";
-    printf("   '%s' -> %d\n", num_str, ft_atoi(num_str));
+    char *num_str = "9223372036854775808";
+    printf("   '%s' -> %d\n %d\n", num_str, ft_atoi(num_str), atoi(num_str));
     
+	int x = 2131;
+	printf("%s",ft_itoa(x));
     printf("ft_split test:\n");
     char **split_result = ft_split("apple,banana,cherry", ',');
     if (split_result)
