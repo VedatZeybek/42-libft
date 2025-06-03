@@ -6,13 +6,13 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 13:09:47 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/02 18:47:20 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/03 12:10:35 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strchr(char *str, char c)
+char	*ft_strchr(const char *str, char c)
 {
 	int	i;
 

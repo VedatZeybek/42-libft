@@ -6,13 +6,13 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 13:12:25 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/02 18:41:01 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/03 12:10:42 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strrchr(char *str, char c)
+char	*ft_strrchr(const char *str, char c)
 {
 	char	*last_char;
 
