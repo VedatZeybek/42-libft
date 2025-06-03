@@ -6,7 +6,7 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 12:15:48 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/03 13:34:18 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/03 19:06:27 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	src_u = (char *)(src);
 	if (len == 0 || dest_u == src_u)
 		return (dst);
-	i = len - 1;
+	i = len;
 	if (dest_u > src_u)
 	{
 		while (i > 0)
 		{
-			dest_u[i] = src_u[i];
+			dest_u[i - 1] = src_u[i - 1];
 			i--;
 		}
-		if (i == 0)
-			dest_u[i] = src_u[i];
+		return (dst);
 	}
 	else
 	{

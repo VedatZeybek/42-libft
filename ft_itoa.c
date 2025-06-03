@@ -6,7 +6,7 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 12:41:10 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/03 14:44:46 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/03 19:21:31 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 	int		is_negative;
 
 	if (n == -2147483648)
-		return ("-2147483648");
+		return (ft_strdup("-2147483648"));
 	i = ft_intlen(n) - 1;
 	str = malloc(ft_intlen(n) * sizeof(char) + 1);
 	if (!str)

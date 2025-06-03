@@ -6,7 +6,7 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 13:14:25 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/02 18:32:40 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/03 22:39:58 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 
 	while (*lst)
 	{
-		temp = *lst;
+		temp = (*lst)->next;
 		ft_lstdelone(*lst, del);
-		*lst = temp->next;
+		*lst = temp;
 	}
 	*lst = NULL;
 }

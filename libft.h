@@ -6,7 +6,7 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 12:55:29 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/03 13:05:19 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/03 23:28:40 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int		ft_isascii(int c);
 char	*ft_itoa(int n);
 void	*ft_memchr(void *ptr, int value, size_t n);
 int		ft_memcmp(const void *ptr1, const void *ptr2, size_t num);
-void	*ft_memcpy(void *dest, const void *src, size_t num);
+void	*ft_memcpy(void *dst, const void *src, size_t num);
 void	*ft_memmove(void *dest, const void *src, size_t num);
 void	*ft_memset(void *buffer, int value, size_t num);
 void	ft_putchar_fd(char c, int fd);
@@ -53,7 +53,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *str, char c);
 char	*ft_strtrim(char const *s1, char const *set);
-char	*ft_substr(char const *str, unsigned int start, size_t size);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 t_list	*ft_lstnew(void *content);

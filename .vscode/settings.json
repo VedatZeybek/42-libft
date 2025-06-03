@@ -3,7 +3,8 @@
 		"stdio.h": "c",
 		"random": "c",
 		"libft.h": "c",
-		"unistd.h": "c"
+		"unistd.h": "c",
+		"climits": "c"
 	},
     "editor.insertSpaces": false,          // Boşluk değil gerçek TAB kullan
     "editor.tabSize": 4,                   // TAB genişliği 4 karakter
