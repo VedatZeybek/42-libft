@@ -6,7 +6,7 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 13:12:30 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/03 22:49:26 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/04 01:42:48 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	str_len = ft_strlen(s);
 	if (start > str_len)
-		return (ft_strdup("\0"));
+		return (ft_strdup(""));
 	if (start + len > str_len)
 		len = str_len - start;
 	result = (char *)malloc(len + 1);
