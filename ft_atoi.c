@@ -6,7 +6,7 @@
 /*   By: vzeybek <vzeybek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 12:12:37 by vzeybek           #+#    #+#             */
-/*   Updated: 2025/06/11 09:23:24 by vzeybek          ###   ########.fr       */
+/*   Updated: 2025/06/11 18:18:02 by vzeybek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	ft_atoi(const char *str)
 	{
 		control = control_overflow(sign, result, str[i]);
 		if (control != 1)
-			return (1);
+			return (control);
 		result = (result * 10) + (str[i] - '0');
 		i++;
 	}
